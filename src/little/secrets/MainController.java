@@ -38,7 +38,7 @@ public class MainController implements Initializable {
 
         public void exit() {
             secrets.setVisible(true);
-            hidden_secret.setText(webEngine.getUserAgent());
+            hidden_secret.setText(webEngine.getUserAgent() + "\n" + webEngine.getHistory().toString()); 
         }
     }
 
@@ -58,16 +58,8 @@ public class MainController implements Initializable {
         webEngine.load("https://nifty-roentgen-5414c4.netlify.com/");               //***************variable part
 
     }
-
-    
-    
-//    WebConsoleListener wb = new WebConsoleListener.setDefaultListener((webView, message, lineNumber, sourceId) -> {
-//    System.out.println(message + "[at " + lineNumber + "]");
-//});
-     
+ 
 
 }
 
-
-
-//        webEngine.load(getClass().getResource("web/index.html").toString());  
+ 
